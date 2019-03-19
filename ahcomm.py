@@ -4,12 +4,16 @@
 #                                                                    **
 # Author: nolanHg                                                    **
 #                                                                    **
-# Purpose: Creates a header comment for any source code file         **
+# Purpose: Creates a header comment for any source code              **
+#          file.                                                     **
 #                                                                    **
-# Date: 03/13/2019                                                   **
+# Date: 03/03/18                                                     **
+#                                                                    **
+# Created with ahcomm.py                                             **
 #                                                                    **
 #**********************************************************************
 
+# Imports
 import sys
 
 ###########################################
@@ -128,7 +132,11 @@ date_str = csymb + " Date: " + date # date line
 f.write(date_str + (H_WIDTH - len(date_str) - 2) * ' ' + "**\n")
 f.write(csymb + (H_WIDTH - 3) * ' ' + "**\n")
 
-f.write(csymb + (H_WIDTH - 1) * '*' + '\n')
+cr_str = csymb + " Created with ahcomm.py "
+f.write(cr_str + (H_WIDTH - len(cr_str) - 2) * ' ' + "**\n")
+f.write(csymb + (H_WIDTH - 3) * ' ' + "**\n")
+
+f.write(csymb + (H_WIDTH - 1) * '*' + '\n\n')
 
 
 ###########################################
